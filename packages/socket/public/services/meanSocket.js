@@ -1,7 +1,7 @@
 /*global io:false*/
 'use strict';
 
-var baseUrl = 'https://marcotest2.herokuapp.com/';
+var baseUrl = 'ws://marcotest2.herokuapp.com/';
 
 angular.module('mean.socket').factory('MeanSocket', function($rootScope) {
 	var socket = io.connect(baseUrl);
