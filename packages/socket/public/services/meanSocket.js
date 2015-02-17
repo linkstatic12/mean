@@ -6,7 +6,7 @@ var baseUrl = 'wss://marcotest2.herokuapp.com/';
 angular.module('mean.socket').factory('MeanSocket', function($rootScope,$window) {
 	
 	var host = $window.location.replace(/^http/, 'ws');
-	var socket = io.connect(host);
+	var socket = io.connect();
 	return {
 		on: function(eventName, callback) {
 			socket.on(eventName, function() {
